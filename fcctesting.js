@@ -74,11 +74,11 @@ module.exports = function (app) {
     });
   });
   app.get('/_api/app-info', function(req, res) {
-    var hs = Object.keys(res._headers)
-      .filter(h => !h.match(/^access-control-\w+/));
-    var hObj = {};
-    hs.forEach(h => {hObj[h] = res._headers[h]});
-    delete res._headers['strict-transport-security'];
+    var hObj = res.getHeaders();
+    Object.keys(hObj)
+      .filter(h => h.match(/^access-control-\w+/))
+      .forEach(h => { delete hObj[h]; });
+    delete hObj['strict-transport-security'];
     res.json({headers: hObj});
   });
   

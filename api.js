@@ -78,9 +78,9 @@ module.exports = function (app) {
       });
     })
     .put((req, res) => {
-      const { report_id } = req.body;
+      const reportId = req.body.thread_id || req.body.report_id;
       Board_Model.findOne({ name: req.params.board }, (err, boardData) => {
-        const reportedThread = findThread(boardData, report_id);
+        const reportedThread = findThread(boardData, reportId);
         if (err || !reportedThread) return res.status(404).send('thread not found');
         reportedThread.reported = true;
         boardData.save((saveError) => {
