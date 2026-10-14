@@ -1,7 +1,7 @@
 {
-	"name": "boilerplate-project-messagebaord",
+	"name": "quiet-board",
 	"version": "0.0.1",
-	"description": "InfoSec project for freeCodeCamp",
+	"description": "A full-stack anonymous message board built with Express and MongoDB",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
@@ -19,13 +19,11 @@
 		"mongodb": "^3.6.10",
 		"mongoose": "^5.13.2"
 	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/freeCodeCamp/boilerplate-project-messageboard"
-	},
 	"keywords": [
-		"node",
-		"express"
+		"anonymous",
+		"message-board",
+		"express",
+		"mongodb"
 	],
 	"license": "MIT"
 }

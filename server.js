@@ -14,6 +14,9 @@ const runner            = require('./test-runner');
 const app = express();
 
 app.use('/public', express.static(process.cwd() + '/public'));
+app.get('/public/style.css', function (req, res) {
+  res.sendFile(process.cwd() + '/style.css');
+});
 
 app.use(cors({ origin: '*' }));
 

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Anonymous Message Board</title>
-    <meta name="description" content="freeCodeCamp project boilerplate">
+    <title>Quiet Board | Anonymous conversations</title>
+    <meta name="description" content="A calm, anonymous message board for thoughtful conversations.">
     <link id="favicon" rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +12,12 @@
   <body>
     <header>
       <h1>
-        ISQA_3 - Anon Message Board
+        Quiet Board
       </h1>
+      <p class="tagline">Anonymous conversations, thoughtfully kept.</p>
     </header>
-    <div id='testui' style='margin-left: 5%'>
-      <h2 style="text-align: left">API Tests:</h2>
+    <div id='testui'>
+      <h2>Try the board API</h2>
         <h4>New thread (POST /api/threads/:board)</h4>
         <form action="/api/threads/test" method="post" id="newThread">
           <input type='text' placeholder='board' id='board1' name='board' required=''><br>
@@ -68,7 +69,7 @@
           <input type="submit" value="Submit">
         </form>        
     </div>
-    <hr style='margin: 50px; margin-top: 200px'>
+    <footer>Quiet Board <span>/</span> built for honest, low-pressure conversation.</footer>
     <!-- Your web-app is https, so your scripts need to be too -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
