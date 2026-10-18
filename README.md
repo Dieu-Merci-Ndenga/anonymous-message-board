@@ -74,3 +74,7 @@ The API follows the freeCodeCamp Anonymous Message Board contract:
 | `DELETE` | `/api/replies/:board` | Soft-delete a reply |
 
 Quiet Board is intentionally small: the important behavior stays visible in the route handlers and the data model, making the project easy to read, run, and extend.
+
+## LICENSE
+
+`MIT`
